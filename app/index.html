@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ContactManagerApp">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" contents="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./bower_component/angular-material/angular-material.min.css" type="text/css" />
+    <link rel="stylesheet" href="./bower_components/angular-material-icons/angular-material-icons.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="./assets/css/app.css" type="text/css" />
+
+    <style type="text/css">
+      [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+        display: none !important;
+      }
+    </style>
+
+  </head>
+  <body layout="row" ng-cloak ng-controller="MainController as vm">
+
+    <div ng-include="'dist/views/sidenav.html'" layout="vertical"></div>
+
+
+    <div layout="column" flex id="wrapper">
+      <div ng-include="'dist/views/toolbar-header.html'"></div>
+      <md-content id="content" flex>
+        <div ng-include="'dist/views/main-content.html'"></div>
+
+        <md-tabs
+          md-dynamic-height=""
+          md-stretch-tabs="always"
+          md-selected="vm.tabIndex">
+            <md-tab label="Bio">
+              <div ng-include="'dist/views/tab-bio.html'"></div>
+            </md-tab>
+            <md-tab label="Notes">
+              <div ng-include="'dist/views/tab-notes.html'"></div>
+            </md-tab>
+          </md-tabs>
+      </md-content>
+    </div>
+
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="./bower_component/angular/angular.min.js"></script>
+      <script type="text/javascript" src="./bower_component/angular-messages/angular-messages.min.js"></script>
+      <script type="text/javascript" src="./bower_component/angular-aria/angular-aria.min.js"></script>
+      <script type="text/javascript" src="./bower_component/angular-animate/angular-animate.min.js"></script>
+      <script type="text/javascript" src="./bower_component/angular-material/angular-material.min.js"></script>
+      <script type="text/javascript" src="./bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.1.8/svg-morpheus.js"></script>
+
+
+      <script src="./dist/models.js"></script>
+      <script src="./dist/services/userService.js"></script>
+      <script src="./dist/controllers/AddUserDialogController.js"></script>
+      <script src="./dist/controllers/ContactPanelController.js"></script>
+      <script src="./dist/controllers/MainController.js"></script>
+      <script src="./dist/boot.js"></script>
+
+    </body>
+</HTML>

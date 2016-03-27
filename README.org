@@ -1,0 +1,6 @@
+#+STARTUP: entitiespretty
+#+STARTUP: indent
+
+* Contact Manager
+
+This is an application for managing your list of contacts!
